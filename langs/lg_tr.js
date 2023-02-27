@@ -361,7 +361,7 @@ const tt = {
     </button>`,
 
     cdq_8:  /*html*/ `
-    İyi ve kötüyü yatay düzlemde nasıl temsil edersiniz
+    İyi ve kötüyü yatay düzlemde nasıl temsil edersiniz?
     <div class="options">
         <span id='cdq_8_top'><input type="radio" id="moral_dir_left" value="moral_dir_left" name="moral_dir">
         <label for="moral_dir_left">İyi solda, kötü sağda</label> <br></span>
