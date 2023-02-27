@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+    <link rel="icon" type="image/png" href="lgo.png">
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="./js_speed.js"></script>
+    <script src="./disptime.js"></script>
+    <script src="./jscd.js"></script>
+    <script src="./utils.js"></script>
+    <script src="./snarc.js"></script>
+    <script src="./main.js"></script>
+    <script src="./sim_test.js"></script>
+    <link href="./basics.css" rel="stylesheet" type="text/css">
+    <link href="./snarc.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="notranslate">
+
+
+    <div id="init_fail" class="page">
+        It seems that the browser you are using does not support current JavaScript methods (ES6, standard since 2015),
+        or maybe JavaScript is disabled altogether. Please use an up-to-date version of a modern browser (preferably
+        Google Chrome) and/or
+        enable JavaScript.
+    </div>
+
+    <div id="mobile" class="page">
+    </div>
+    <div id="screen" class="page">
+    </div>
+
+    <div class="page" id="start">
+
+        <div style="display:flex;justify-content:space-between;">
+            <div style="float:left">
+                <img src="./media/uni_logo_1.png" alt="" style="max-height:65px;max-width:100%;">
+            </div>
+            <div style="float:right">
+                <img src="./media/uni_logo_2.png" alt="" style="max-height:65px;max-width:100%;">
+            </div>
+        </div>
+        <hr>
+        <div id="demo_info">
+            <b>Note: this is a demo version of the test with the following
+                differences:</b>
+            <ul>
+                <li> There are only 8 (instead of 240) trials in each block.</li>
+                <li> None of the questions are obligatory in order to proceed to the next page (and
+                    there is no alert if questions are not answered).</li>
+                <li> No fullscreen is initiated automatically.</li>
+                <li> The mininum break between two blocks is only 5 seconds (instead of 30).</li>
+                <li> No data is saved on the server.</li>
+            </ul>
+        </div>
+        <div id="consent_text">
+        </div>
+    </div>
+
+    <div class="page" id="demos">
+    </div>
+
+
+    <div id="snarc" class="page">
+        <div id="pauseControl" style="z-index: 999!important;">
+        </div>
+        <div id="wrongkeys">
+        </div>
+        <div id="warning" style="z-index: 999!important;">
+        </div>
+        <div id="keystroke">
+        </div>
+        <section id="exp_start" class="text">
+        </section>
+        <section id="description" class="text"></section>
+        <section id="change" class="text">
+        </section>
+        <div id="help" class="text help"><span class="nums_d_sh">
+            </span> = <span class="key_d"></span>, <span class="nums_k_sh"></span> = <span class="key_k"></span>
+        </div>
+        <section id="stimulus"></section>
+    </div>
+
+
+    <div class="page" id="cdq_1">
+        <div class="borders">
+            <div class="expand" id="cdq_1_1">
+            </div>
+
+            <button type="button" class="switcher" onclick="cdq_switcher(this)">
+                <div class="switch_arrow"></div>
+            </button>
+
+            <div class="collapse" id="cdq_1_2">
+                <hr>
+                <span class='img_div' id='fruit_1_apple_div'> </span>
+                <span class='img_div' id='fruit_2_banana_div'> </span>
+                <span class='img_div' id='fruit_3_orange_div'> </span>
+                <span class='img_div' id='fruit_4_pear_div'> </span>
+
+                <br><br>
+                <input class="text_input" id="text1" maxlength="10"><br>
+                <input class="text_input" id="text2" maxlength="10"><br>
+                <input class="text_input" id="text3" maxlength="10"><br>
+                <input class="text_input" id="text4" maxlength="10">
+
+                <hr>
+                <button type="button" class="switcher" onclick="cdq1_submit()">
+                    <div class="switch_arrow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="cdq_2">
+        <div class="borders">
+            <div id="cdq_2_1" class="expand">
+            </div>
+
+            <button type="button" class="switcher" onclick="cdq_switcher(this)">
+                <div class="switch_arrow"></div>
+            </button>
+
+            <div id="cdq_2_2" class="collapse">
+                <hr>
+                <div class='img_div' id='orange_1_div' ondrop="drop(event)" ondragover="let_drop(event)"> </div>
+                <div class='img_div' id='orange_3_div' ondrop="drop(event)" ondragover="let_drop(event)"> </div>
+                <div class='img_div' id='orange_2_div' ondrop="drop(event)" ondragover="let_drop(event)"> </div>
+
+                <span class='img_targ' id='orange_1_targ' ondrop="drop(event)" ondragover="let_drop(event)"> </span>
+                <span class='img_targ' id='orange_2_targ' ondrop="drop(event)" ondragover="let_drop(event)"> </span>
+                <span class='img_targ' id='orange_3_targ' ondrop="drop(event)" ondragover="let_drop(event)"> </span>
+                <div style="clear:both;"></div>
+
+                <hr>
+                <button type="button" class="switcher" onclick="cdq2_submit()">
+                    <div class="switch_arrow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="cdq_3">
+        <div class="borders">
+            <div class="expand" id="cdq_3_1">
+            </div>
+
+            <button type="button" class="switcher" onclick="cdq_switcher(this)">
+                <div class="switch_arrow"></div>
+            </button>
+
+            <div class="collapse" id="cdq_3_2">
+                <hr>
+                <div id='bike_rightward_div'> </div>
+                <div id='bike_leftward_div'> </div>
+                <div id='bike_na_div' class="class_nopref"></div>
+                <hr>
+                <button type="button" class="switcher" onclick="cdq3_submit()">
+                    <div class="switch_arrow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="cdq_4">
+    </div>
+
+    <div class="page" id="cdq_5">
+        <div class="borders">
+            <div class="expand" id="cdq_5_1">
+            </div>
+
+            <button type="button" class="switcher" onclick="cdq_switcher(this)">
+                <div class="switch_arrow"></div>
+            </button>
+
+            <div class="collapse" id="cdq_5_2">
+                <hr>
+                <div id='give_right_div'> </div>
+                <div id='give_left_div'> </div>
+                <div id='give_na_div' class="class_nopref"> </div>
+                <hr>
+                <button type="button" class="switcher" onclick="cdq5_submit()">
+                    <div class="switch_arrow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="cdq_6">
+    </div>
+
+    <div class="page" id="cdq_7">
+    </div>
+
+    <div class="page" id="cdq_8">
+    </div>
+
+    <div class="page" id="fingercounting">
+    </div>
+
+    <div class="page" id="dataqualitycheck">
+    </div>
+
+    <div class="page" id="ending">
+    </div>
+</body>
