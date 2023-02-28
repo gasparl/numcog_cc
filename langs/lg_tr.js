@@ -54,7 +54,7 @@ const tt = {
 
         <hr>
         
-        Çalışmaya nasıl devam etmek istiyorsunuz ?
+        Çalışmaya nasıl devam etmek istiyorsunuz?
         
         <div class="options">
             <input name="seriousness" id='participate' value="participate" type="radio"> 
@@ -329,7 +329,7 @@ const tt = {
         Bir sonraki ekranda “İki kişi arasında hediye değiş tokuşu” sahnesini daha iyi tanımlayan seçeneği işaretleyin. Eğer belirli bir tercihiniz yoksa “X” seçeneğini işaretleyebilirsiniz.`,
 
     cdq_6:  /*html*/ `
-    “İki kişi arasında hediye değiş tokuşu” sahnesini nasıl çizersiniz ?
+    “İki kişi arasında hediye değiş tokuşu” sahnesini nasıl çizersiniz?
     <div class="options">
     <span id='cdq_6_top'><input type="radio" id="give_draw_right" value="give_draw_right" name="give_draw">
         <label for="give_draw_right">Hediyeyi veren kişi solda, alan kişi sağda</label> <br></span>
@@ -346,7 +346,7 @@ const tt = {
 
     cdq_7:  /*html*/ `
     <div id="a_line"></div>
-    Yukarıda gördüğünüz gibi bir yatay çizgiyi nasıl çizersiniz ?
+    Yukarıda gördüğünüz gibi bir yatay çizgiyi nasıl çizersiniz?
     <div class="options">
         <span id='cdq_7_top'><input type="radio" id="line_draw_right" value="line_draw_right" name="line_draw">
         <label for="line_draw_right">Soldan sağa doğru</label> <br></span>
