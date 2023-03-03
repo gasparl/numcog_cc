@@ -130,7 +130,9 @@ const load_language = function() {
             }
         });
         // adjust and display texts
-        document.getElementById('pass_id').textContent = misc.subject_id;
+        if (document.getElementById('pass_id')) {
+            document.getElementById('pass_id').textContent = misc.subject_id;
+        }
         if (misc.userid === null || misc.userid.length < 2) {
             misc.userid = "na";
         } else if (tt.prolific_link) {
