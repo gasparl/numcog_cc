@@ -188,6 +188,51 @@ const tt = {
         <hr>
         <button class="main_button class_next" type="button" onclick="demos_submitted();"></button>
     `,
+    // For each foreign language selected
+    l2_use: /*html*/ `
+        Are you currently using this language in written or spoken terms?<br>
+        <input type="radio" id="l2_use3" value="l2_use3" name='l2_use' />
+        <label for="l2_use3">
+            yes, I have been using it within the last month
+        </label><br>
+        <input type="radio" id="l2_use2" value="l2_use2" name='l2_use' />
+        <label for="l2_use2">
+            no, but I have been using it within the past 5 years
+        </label><br>
+        <input type="radio" id="l2_use1" value="l2_use1" name='l2_use' />
+        <label for="l2_use1">
+            no, I have not been using it within the past 5 years
+        </label><br>
+        <div id='l2_use_time' style='display:none;margin-top:10px;'>
+            How much time per day do you use this language on average?
+            <ul>
+                <li>
+                Handwritten: <input type="number" onkeypress='return /[0-9]/i.test(event.key)'
+                oninput="this.value=this.value.slice(0,2)" min='1' max='24' id="l2_use_h1" size="4">
+                    hours and
+                <input type="number" onkeypress='return /[0-9]/i.test(event.key)'
+                oninput="this.value=this.value.slice(0,2)" min='1' max='60' id="l2_use_m1" size="4">
+                    minutes
+                </li>
+                <li>
+                Typed: <input type="number" onkeypress='return /[0-9]/i.test(event.key)'
+                oninput="this.value=this.value.slice(0,2)" min='1' max='24' id="l2_use_h2" size="4">
+                    hours and
+                <input type="number" onkeypress='return /[0-9]/i.test(event.key)'
+                oninput="this.value=this.value.slice(0,2)" min='1' max='60' id="l2_use_m2" size="4">
+                    minutes
+                </li>
+                <li>
+                Spoken: <input type="number" onkeypress='return /[0-9]/i.test(event.key)'
+                oninput="this.value=this.value.slice(0,2)" min='1' max='24' id="l2_use_h3" size="4">
+                    hours and
+                <input type="number" onkeypress='return /[0-9]/i.test(event.key)'
+                oninput="this.value=this.value.slice(0,2)" min='1' max='60' id="l2_use_m3" size="4">
+                    minutes
+                </li>
+            </ul>
+        </div>
+    `,
     // Warning alert when not all fields are filled in
     unanswered: 'Please answer all questions on this page.',
     // Response Keys

@@ -137,6 +137,15 @@ const load_language = function() {
             document.getElementById('pass_container').innerHTML = tt.prolific_link;
         }
 
+        for (x = 0; x < document.getElementsByTagName('input').length; x++) {
+            const inp_el = document.getElementsByTagName('input').item(x);
+            if (inp_el.type === 'checkbox' && inp_el.id.slice(0, 3) === 'l2_' &&
+                inp_el.id !== 'l2_na') {
+                append_l2use(inp_el);
+                inp_el.onclick = l2_use;
+            }
+        }
+
         let to_hide;
         if (['tr', 'fa'].includes(misc.lg)) {
             to_hide = 'only_de';
@@ -160,7 +169,7 @@ const load_language = function() {
 
 
         DT.preload(allimages.map(img => './media/' + img))
-            .then(function(images) {
+            .then(function() {
                 for (const ikey in DT.images) {
                     DT.images[ikey].classList.add("img");
                     const base_name = ikey.replace('./media/', '').replace('.jpeg', '');
@@ -189,6 +198,40 @@ const load_language = function() {
     };
     l1_script.src = './langs/lg_' + misc.lg + '.js';
     document.head.appendChild(l1_script);
+};
+
+const append_l2use = function(inp_el) {
+    const l2_div = document.createElement('div');
+    l2_div.innerHTML = tt.l2_use;
+    l2_div.id = 'l2use' + inp_el.id;
+    const l2_use_time = 'l2use_time' + inp_el.id;
+    l2_div.querySelector('#l2_use_time').id = l2_use_time;
+    inp_el.nextElementSibling.insertAdjacentElement("afterend", l2_div);
+
+    [...l2_div.querySelectorAll('input')].forEach(l2use_input => {
+        l2use_input.id = l2use_input.id + inp_el.id.slice(2, 5);
+        if (l2use_input.type === 'radio') {
+            l2use_input.nextElementSibling.setAttribute("for", l2use_input.id);
+            l2use_input.name = l2use_input.name + inp_el.id.slice(2, 5);
+            l2use_input.onclick = function() {
+                if (get_radio(l2use_input.name) === 'l2_use1') {
+                    document.getElementById(l2_use_time).style.display = 'none';
+                } else {
+                    document.getElementById(l2_use_time).style.display = 'block';
+                }
+            };
+        }
+    });
+    l2_div.style.display = 'none';
+};
+
+const l2_use = function() {
+    const plus_id = 'l2use' + this.id;
+    if (this.checked) {
+        document.getElementById(plus_id).style.display = 'block';
+    } else {
+        document.getElementById(plus_id).style.display = 'none';
+    }
 };
 
 const check_params = function() {
