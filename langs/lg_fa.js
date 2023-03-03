@@ -54,7 +54,6 @@ const tt = {
     
     <p>
     اگر حداقل 18 سال سن دارید و موافق شرکت در مطالعه هستید، لطفا روی دکمه [بعدی] در زیر کلیک کنید.
-<button class="main_button" type="button" onclick="start_block();">بعدی </button>
     </p>
 
     <hr>
@@ -165,9 +164,8 @@ const tt = {
     <input id="loc2_notes" style="width: 170px;margin:0;" maxlength="20">
     <hr>
 
-چقدر با فرهنگ  </span>غرب <b><span class="only_east">  
-</span>خاور میانه  <b><span class="only_de">  
-<b/>آشنا <b>هستید؟
+چقدر با فرهنگ  غرب <b>  
+خاور میانه  </b>هستید؟
     <div class="options">
         <input type="radio" id="cult3" value="3" name="cultur">
         <label for="cult3">بسیار آشنا</label><br>
