@@ -4,14 +4,19 @@
 // all texts in the website in Persian
 
 // Instruction Screen (after practice session)
-const main_text = /*html*/ `<br />The practice session is now complete. <br /><br />
-Please keep your left index finger on the <span class='key_d'></span> key and your right index finger on
-the <span class='key_k'></span> key. <br /><br />
-<span>If the number is <span class='nums_d'></span>, press <span class='key_d'></span>.<br />
-If the number is <span class='nums_k'></span>, press <span class='key_k'></span>.</span> <br /><br />
-Please answer as quickly and as accurately as possible. <br /><br />
-The feedback on the accuracy of your answers will not be displayed from this point onward.<br /><br />
-Press <span class='key_d'></span> or <span class='key_k'></span> on your keyboard to start the next phase.<br /><br />`;
+const main_text = /*html*/ `<br /> اکنون جلسه تمرین کامل شده است<br /><br />
+    لطفا انگشت اشاره چپ خود را روی کلید
+    <span class='key_d'></span>
+    و انگشت اشاره سمت راست خود را روی کلید
+    <span class='key_k'></span>
+    نگه دارید<br /><br />
+
+    <span> اگر عدد <span class='nums_d'></span> است <span class='key_d'> را فشار دهید </span>.<br />
+    اگر عدد فرد  <span class='nums_k'></span>لست <span class='key_k'></span> را فشار دهید.</span> <br /><br />
+    لطفا تا جایی که می توانید سریع و دقیق پاسخ دهید <br /><br />
+    بازخورد در مورد صحت پاسخ های شما از این مرحله به بعد نمایش داده نخواهد شد <br /><br />
+    <span class='key_d'></span> یا <span class='key_k'></span> 
+    را روی صفحه کلید خود فشار دهید تا مرحله بعدی شروع شود<br /><br />`;
 
 const tt = {
     // Welcome Screen
