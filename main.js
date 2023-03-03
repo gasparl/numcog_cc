@@ -344,6 +344,23 @@ const demos_submitted = function() {
 
     if (demo || (misc.gender && (misc.age || misc.age_na) && is_lang
         && misc.country_current && misc.country_lived && misc.handedness && misc.culture)) {
+
+        [...document.querySelectorAll('input')].forEach(user_input => {
+            if (user_input.id.startsWith('l2_use') && (user_input.parentElement.style.display === 'block' || user_input.value)) {
+                if (user_input.type === 'radio') {
+                    if (get_radio(user_input.name)) {
+                        misc[user_input.name] = get_radio(user_input.name);
+                        console.log(misc[user_input.name]);
+                    }
+                } else {
+                    if (user_input.value) {
+                        misc[user_input.id] = user_input.value;
+                        console.log(misc[user_input.id]);
+                    }
+                }
+            }
+        });
+
         switch_page('demos', 'snarc');
         document.body.style.backgroundColor = "rgb(150, 150, 150)";
     } else {
