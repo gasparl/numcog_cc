@@ -153,8 +153,8 @@ const load_language = function() {
             to_hide = 'only_de';
             if (misc.lg === 'fa') {
                 document.body.style.direction = 'rtl';
-                keys.d = keys_persian.d;
-                keys.k = keys_persian.k;
+                task_keys.d = keys_persian.d;
+                task_keys.k = keys_persian.k;
             }
         } else {
             to_hide = 'only_east';

@@ -5,9 +5,9 @@ let sim_user_x = function() {
     const rt_sim = rdigit(400, 600);
     simTimeout = setTimeout(function() {
         if (Math.random() < 0.5) { // e.g. 95% correctly right key
-            sim_key = keys.d;
+            sim_key = task_keys.d;
         } else {
-            sim_key = keys.k;
+            sim_key = task_keys.k;
         }
         document.dispatchEvent(new KeyboardEvent('keydown', {
             'key': sim_key

@@ -1,7 +1,7 @@
 /* Gaspar Lukacs 2022 */
 /*jshint esversion: 6 */
 
-const keys = {
+const task_keys = {
     d: 'd',
     k: 'k'
 };
@@ -10,7 +10,7 @@ const keys_persian = {
     k: 'ن'
 };
 
-Object.seal(keys);
+Object.seal(task_keys);
 
 // set numbers to be used
 const num_stimuli = [1, 2, 3, 4, 6, 7, 8, 9];
@@ -73,10 +73,10 @@ const startButton = function() {
 
 const set_keys = function() {
     [...document.getElementsByClassName('key_d')].forEach((elem) => {
-        elem.textContent = keys.d.toUpperCase();
+        elem.textContent = task_keys.d.toUpperCase();
     });
     [...document.getElementsByClassName('key_k')].forEach((elem) => {
-        elem.textContent = keys.k.toUpperCase();
+        elem.textContent = task_keys.k.toUpperCase();
     });
 };
 
@@ -129,7 +129,7 @@ const change_key = function(d_or_k) {
                 '8', '9', '0', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10',
                 'F11', 'F12'].indexOf(event.key) === -1) { // If the key is not a special key
 
-                keys[d_or_k] = event.key.toLowerCase();
+                task_keys[d_or_k] = event.key.toLowerCase();
                 misc['overridden_' + d_or_k + '_key'] = event.key.toLowerCase();
                 document.onkeydown = null;
                 set_keys();
@@ -178,7 +178,7 @@ const start_block = function() {
     set_task_type();
     setTimeout(() => {
         document.onkeydown = function(event) {
-            if ((event.key.toLowerCase() == keys.d || event.key.toLowerCase() == keys.k)) {
+            if ((event.key.toLowerCase() == task_keys.d || event.key.toLowerCase() == task_keys.k)) {
                 fullscreen_on();
                 document.body.style.backgroundColor = "rgb(150, 150, 150)";
                 document.onkeydown = null; // Stop listening for the keypress
@@ -333,7 +333,7 @@ const trial_listener = function() {
     document.onkeydown = function(event) {
         item_x.keydown_time = event.timeStamp;
         item_x.keydown_time_now = DT.now();
-        if (event.key.toLowerCase() == keys.d || event.key.toLowerCase() == keys.k) {
+        if (event.key.toLowerCase() == task_keys.d || event.key.toLowerCase() == task_keys.k) {
             document.onkeydown = null;
             document.onkeyup = function(ev2) {
                 if (ev2.key === event.key) {
@@ -346,7 +346,7 @@ const trial_listener = function() {
             down_counter = false;
             document.body.style.backgroundColor = "rgb(150, 150, 150)";
             fullscreen_on();
-            if (keys.d == event.key.toLowerCase()) {
+            if (task_keys.d == event.key.toLowerCase()) {
                 item_x.response_key = 'd';
             } else {
                 item_x.response_key = 'k';
