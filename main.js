@@ -155,6 +155,7 @@ const load_language = function() {
                 document.body.style.direction = 'rtl';
                 task_keys.d = keys_persian.d;
                 task_keys.k = keys_persian.k;
+                set_keys();
             }
         } else {
             to_hide = 'only_east';
