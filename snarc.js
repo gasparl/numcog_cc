@@ -74,20 +74,25 @@ const set_keys = function() {
         elem.textContent = keys.k.toUpperCase();
     });
 };
+
+const to_fa = function(n) {
+    return (misc.lg === 'fa' ? nums_persian[n] : n);
+};
+
 const set_task_type = function() {
     let type1, type2;
     const nums_dict = {};
     if (current_task === 'parity') {
         type1 = tt.even;
         type2 = tt.odd;
-        nums_dict['even'] = type1 + ' (' + num_stimuli.filter(n => n % 2 === 0).join(', ') + ')';
-        nums_dict['odd'] = type2 + ' (' + num_stimuli.filter(n => n % 2 !== 0).join(', ') + ')';
+        nums_dict['even'] = type1 + ' (' + num_stimuli.filter(n => n % 2 === 0).map(to_fa).join(', ') + ')';
+        nums_dict['odd'] = type2 + ' (' + num_stimuli.filter(n => n % 2 !== 0).map(to_fa).join(', ') + ')';
         document.getElementById('keystroke').innerHTML = tt.keystroke_par;
     } else {
         type1 = tt.large;
         type2 = tt.small;
-        nums_dict['large'] = type1 + ' (' + num_stimuli.filter(n => n > 5).join(', ') + ')';
-        nums_dict['small'] = type2 + ' (' + num_stimuli.filter(n => n < 5).join(', ') + ')';
+        nums_dict['large'] = type1 + ' (' + num_stimuli.filter(n => n > 5).map(to_fa).join(', ') + ')';
+        nums_dict['small'] = type2 + ' (' + num_stimuli.filter(n => n < 5).map(to_fa).join(', ') + ')';
         document.getElementById('keystroke').innerHTML = tt.keystroke_mag;
     }
 
@@ -105,7 +110,7 @@ const set_task_type = function() {
         elem.textContent = nums_dict[task_type[which_half].k];
     });
     [...document.getElementsByClassName('num_stimuli')].forEach((elem) => {
-        elem.textContent = num_stimuli.join(', ');
+        elem.textContent = num_stimuli.map(to_fa).join(', ');
     });
 };
 
