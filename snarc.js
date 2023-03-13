@@ -392,7 +392,7 @@ const feed_astray = function() {
     document.getElementById('wrongkeys').style.height = 'auto';
     setTimeout(function() {
         document.getElementById('wrongkeys').style.height = '0';
-    }, 1000);
+    }, 2000);
 };
 
 
