@@ -5,6 +5,11 @@ const keys = {
     d: 'd',
     k: 'k'
 };
+const keys_persian = {
+    d: 'ی',
+    k: 'ن'
+};
+
 Object.seal(keys);
 
 // set numbers to be used
