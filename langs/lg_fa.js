@@ -152,7 +152,7 @@ const tt = {
     <input type="radio" id="loc_fa" value="loc_fa" name='loc' />
     <label for="loc_fa">ایران</label><br>
     <input type="radio" id="loc_na" value="loc_na" name='loc' />
-    <label for="loc_na">Other (please specify below)</label><br>
+    <label for="loc_na">سایر (لطفا در پایین مشخص کنید)</label><br>
     کشور دیگر:
     <input id="loc_notes" style="width: 170px;margin:0;" maxlength="20">
     <hr>
@@ -164,7 +164,7 @@ const tt = {
     <input type="radio" id="loc2_fa" value="loc2_fa" name='loc2' />
     <label for="loc2_fa">ایران</label><br>
     <input type="radio" id="loc2_na" value="loc2_na" name='loc2' />
-    <label for="loc2_na">Other (please specify below)</label><br>
+    <label for="loc2_na">سایر (لطفا در پایین مشخص کنید) ><br>
     کشور دیگر:
     <input id="loc2_notes" style="width: 170px;margin:0;" maxlength="20">
     <hr>
