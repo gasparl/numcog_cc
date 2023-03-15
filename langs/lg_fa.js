@@ -110,7 +110,7 @@ const tt = {
     <input type="checkbox" onclick="checkageconsent(event);" style="margin-left: -1px;" id="age_na">
         <label for="age_na"> ترجیح می دهم پاسخ ندهم</label>
     <hr>
-    شما <b>زبان (های) اصلی </b> (می توانید بیشتر از یک زبان را انتخاب کنید):<br>
+    <b>زبان (های) اصلی شما (می توانید بیشتر از یک زبان را انتخاب کنید):<br>
     <input type="checkbox" id="l1_de" />
     <label for="l1_de">آلمانی</label><br>
     <input type="checkbox" id="l1_tr" />
