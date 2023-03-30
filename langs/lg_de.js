@@ -551,7 +551,7 @@ const tt = {
     save_success: /*html*/ `Ihre Daten wurden (anonymisiert) gespeichert. Sie können dieses Fenster nun verlassen, indem Sie das Browserfenster schließen. Eventuell müssen Sie vorher den Vollbildmodus durch Drücken von <kbd>Esc</kbd> oder <kbd>F11</kbd> verlassen.`
     ,
     save_fail: /*html*/ `Data cannot be saved on the server. Perhaps you have no internet connection? <strong>Click <button onclick="upload_final();" id="retry_button">RETRY<span id="retry_spin"></span></button> to try saving on the server. (This message will disappear on successful saving.) Alternatively, click <button onclick="dl_as_file();">DOWNLOAD</button> to save your data
-                manually (note: you must allow pop-ups), and then send it to lkcsgaspar@gmail.com.</strong>
+                manually (note: you must allow pop-ups), and then send it to numcog@psycho.uni-tuebingen.de.</strong>
             `,
     class_nopref: 'X',
     class_next: 'Weiter'

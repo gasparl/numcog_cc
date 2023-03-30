@@ -25,11 +25,11 @@ const tt = {
     از اینکه به مطالعه ما علاقمندید سپاسگزاریم
 
     <p>
-    این مطالعه مربوط به شناخت اعداد ست و شرکت در آن حدود 30 دقیقه زمان می برد. انجام این آزمایش به کامپیوتر (رومیزی یا لپ تاپ) نیاز دارد و در دستگاه های تلفن همراه  <b>(موبایل یا تبلت) </b>  امکان پذیر نیست.
+    این مطالعه مربوط به شناخت اعداد ست و شرکت در آن حدود ۳۰ دقیقه زمان می برد. انجام این آزمایش به کامپیوتر (رومیزی یا لپ تاپ) نیاز دارد و در دستگاه های تلفن همراه  <b>(موبایل یا تبلت) </b>  امکان پذیر نیست.
     </p>
 
     <p>
-    لطفا در صورتی که حداقل 18 سال سن دارید در این مطالعه شرکت کنید. لطفا مطالعه را در محیطی آرام انجام دهید تا از حواس پرتی ناخواسته جلوگیری شود.
+    لطفا در صورتی که حداقل ۱۸ سال سن دارید در این مطالعه شرکت کنید. لطفا مطالعه را در محیطی آرام انجام دهید تا از حواس پرتی ناخواسته جلوگیری شود.
     </p>
 
     <p>
@@ -54,11 +54,11 @@ const tt = {
     <hr>
 
     <p>
-    اگر کمتر از 18 سال سن دارید یا نمی خواهید در این مطالعه شرکت کنید، لطفا پنجره مرورگر را ببندید و از این صفحه خارج شوید.
+    اگر کمتر از ۱۸ سال سن دارید یا نمی خواهید در این مطالعه شرکت کنید، لطفا پنجره مرورگر را ببندید و از این صفحه خارج شوید.
     </p>
     
     <p>
-    اگر حداقل 18 سال سن دارید و موافق شرکت در مطالعه هستید، لطفا روی دکمه [بعدی] در زیر کلیک کنید.
+    اگر حداقل ۱۸ سال سن دارید و موافق شرکت در مطالعه هستید، لطفا روی دکمه [بعدی] در زیر کلیک کنید.
     </p>
 
     <hr>
@@ -402,11 +402,11 @@ const tt = {
     ,
     // Break Screen 1 (between two blocks, 30 seconds long)
     mid_break: [`</br /> اکنون نیمه اول آزمایش اول تکمیل شده است <br /><br />
-<br /><br />`, ` لطفا یک استراحت کوتاه (حداقل 30 ثانیه) داشته باشید
-   `, `</br />اکنون آزمایش اول تکمیل شده است<br /><br />
-    لطفا یک استراحت کوتاه (حداقل 30 ثانیه) داشته باشید<br /><br />`,
+    لطفا یک استراحت کوتاه (حداقل ۳۰ ثانیه) داشته باشید<br /><br />`,
+    `</br />اکنون آزمایش اول تکمیل شده است<br /><br />
+    لطفا یک استراحت کوتاه (حداقل ۳۰ ثانیه) داشته باشید<br /><br />`,
         `</br />اکنون نیمه اول آزمایش دوم تکمیل شده است<br /><br />
-    لطفا یک استراحت کوتاه (حداقل 30 ثانیه) داشته باشید<br /><br />`]
+    لطفا یک استراحت کوتاه (حداقل ۳۰ ثانیه) داشته باشید<br /><br />`]
     ,
     // Break Screen 2 (between two blocks):
     mid_break2: /*html*/ `اکنون می توانید نیمه دوم کار را ادامه دهید<br /><br />
@@ -425,16 +425,15 @@ const tt = {
 اگر عدد فرد یا کوچکتر از ۵<span class="nums_d" style="font-weight: 900; text-transform: lowercase;"></span>,  است،
 <span class="key_d" style="font-weight: 900;"></span>.  را فشار دهید.
 اگر عدد زوج یا بزرگتر از ۵ <span class="nums_k" style="font-weight: 900; text-transform: lowercase;"></span>,  است، 
-<span class="key_ k" style="font-weight: 900;"></span>.  را فشار دهید.`
+<span class="key_k" style="font-weight: 900;"></span>.  را فشار دهید.`
     ,
     // Warning/Screen for breaks within a block
     pauseControl: /*html*/ `<p>شما در حال حاضر در حال استراحت هستید. برای ادامه، یکی از دو کلید پاسخ را فشار دهید:
-اگر عدد فرد یا کوچکتر از ۵<span class="nums_d" style="font-weight: 900; text-transform: lowercase;"></span>,  است،
-<span class="key_d" style="font-weight: 900;"></span>.  را فشار دهید.
-اگر عدد زوج یا بزرگتر از ۵ <span class="nums_k" style="font-weight: 900; text-transform: lowercase;"></span>,  است، 
-<span class="key_ k" style="font-weight: 900;"></span>.  را فشار دهید.
-If the number is <span class="nums_d" style="font-weight: 900; text-transform: lowercase;"></span>, press <span class="key_d" style="font-weight: 900;"></span>. If the number is <span class="nums_k" style="font-weight: 900; text-transform: lowercase;"></span>, press <span class="key_k" style="font-weight: 900;"></span>.</p>`
-    ,
+    اگر عدد فرد یا کوچکتر از ۵<span class="nums_d" style="font-weight: 900; text-transform: lowercase;"></span>,  است،
+    <span class="key_d" style="font-weight: 900;"></span>.  را فشار دهید.
+    اگر عدد زوج یا بزرگتر از ۵ <span class="nums_k" style="font-weight: 900; text-transform: lowercase;"></span>,  است، 
+    <span class="key_k" style="font-weight: 900;"></span>.  را فشار دهید.`   ,
+
     // Warning when leaving full-screen mode (plus automatic return to in each trial)
     warning: /*html*/ `<p>شما از حالت تمام صفحه خارج شده اید. لطفاً با فشار دادن این دکمه به حالت تمام صفحه بازگردید</p>
         <button onclick="fullscreen_on(true);" style="margin-bottom: 22px;"> حالت تمام صفحه</button>`
@@ -647,7 +646,7 @@ If the number is <span class="nums_d" style="font-weight: 900; text-transform: l
     save_fail: /*html*/ `اطلاعات قابل ذخیره شدن نیستند، ممکن ست مشکلی در اتصال شما به اینترنت وجود داشته باشد؟ <strong>این دکمه را فشار دهید <button onclick="upload_final();" id="retry_button">RETRY<span id="retry_spin"></span></button> تا اطلاعات ذخیره شوند (This message will disappear on successful saving.) در غیر این صورت، این کلید را فشار دهید <button onclick="dl_as_file();">ذخیره</button> 
 تا اطلاعات شما به صورت دستی ذخیره شود
 (توجه: برای این کار باید دریافت نوتیفیکیشن بر روی مرورگر خود را فعال کنید) و سپس فایل ذخیره شده را به این آدرس ایمیل کنید.
-lkcsgaspar@gmail.com.</strong>
+numcog@psycho.uni-tuebingen.de.</strong>
         `,
     class_nopref: 'X',
     class_next: 'بعدی'

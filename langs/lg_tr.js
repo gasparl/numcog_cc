@@ -49,7 +49,7 @@ const tt = {
         </p>
         
         <p>
-        Eğer en az 18 yaşındaysanız ve çalışmaya katılmayı kabul ediyorsanız, lütfen aşağıdaki [Next] butonuna tıklayınız.
+        Eğer en az 18 yaşındaysanız ve çalışmaya katılmayı kabul ediyorsanız, lütfen aşağıdaki [İleri] butonuna tıklayınız.
         </p>
 
         <hr>
@@ -236,23 +236,23 @@ const tt = {
             ihtiyacınız olacak. Bu tuşların klavyenizde aynı yükseklikte olması ve aralarında dört tuş boşluk olması gerekmektedir. Lütfen klavyenizdeki 
             the <span class="key_d">D</span> tuşunun ve <span class="key_k">K</span> tuşunun bu kurallara uyup uymadığını kontrol edin.<br /><br />
 
-            Eğer <span class="key_d">D</span> ve <span class="key_k">K</span> tuşları kurallara uyuyorsa ve bu tuşlarla devam etmek istiyorsanız aşağıdaki <span>[Next]</span> butonuna tıklayın. Eğer farklı tuşlar tanımlamanız gerekiyorsa lütfen aşağıdaki <span>[Change]</span> butonuna tıklayın ve yeni tuşları tanımlayın.<br /><br />
+            Eğer <span class="key_d">D</span> ve <span class="key_k">K</span> tuşları kurallara uyuyorsa ve bu tuşlarla devam etmek istiyorsanız aşağıdaki <span>[İleri]</span> butonuna tıklayın. Eğer farklı tuşlar tanımlamanız gerekiyorsa lütfen aşağıdaki <span>[Değiştir]</span> butonuna tıklayın ve yeni tuşları tanımlayın.<br /><br />
             <br /><br />
             <div class="buttonClass">
-                <button id="changeButton" onclick="changeButton();" class="button_next">Change</button>
-                <button id="startButton" onclick="startButton();" class="button_next">Next</button>
+                <button id="changeButton" onclick="changeButton();" class="button_next">Değiştir</button>
+                <button id="startButton" onclick="startButton();" class="button_next">İleri</button>
             </div>`
     ,
     // Change Response Keys
     change: /*html*/ `<br />Sağ ve sol tepki tuşlarının klavyenizde aynı yükseklikte olması ve aralarında dört tuş boşluk olması gerekmektedir. <br /><br />
-            <span class="key_d"></span> tuşu yerine kullanacağınız sol tepki tuşunu tanımlamak için aşağıdaki [Left] butonuna tıklayınız. <br />
-            Daha sonra <span class="key_k"></span> tuşu yerine kullanacağınız sağ tepki tuşunu tanımlamak için aşağıdaki [Right] butonuna tıklayınız. <br /><br />
-            Lütfen tepki tuşlarını aklınızda tutun ve atanan yeni tuşları kaydetmek için aşağıdaki [Complete] butonuna tıklayın.
+            <span class="key_d"></span> tuşu yerine kullanacağınız sol tepki tuşunu tanımlamak için aşağıdaki [Sol] butonuna tıklayınız. <br />
+            Daha sonra <span class="key_k"></span> tuşu yerine kullanacağınız sağ tepki tuşunu tanımlamak için aşağıdaki [Sağ] butonuna tıklayınız. <br /><br />
+            Lütfen tepki tuşlarını aklınızda tutun ve atanan yeni tuşları kaydetmek için aşağıdaki [Tamamla] butonuna tıklayın.
             <br /><br />
             <div class="buttonClass changeButt">
-                <button id="leftButton" onclick="leftButton()" class="button_next">Left</button>
-                <button id="rightButton" onclick="rightButton()" class="button_next">Right</button>
-                <button id="completeButton" onclick="completeButton()" class="button_next">Complete</button>
+                <button id="leftButton" onclick="leftButton()" class="button_next">Sol</button>
+                <button id="rightButton" onclick="rightButton()" class="button_next">Sağ</button>
+                <button id="completeButton" onclick="completeButton()" class="button_next">Tamamla</button>
             </div>`
     ,
     // Instructions on the bottom (during practice session)
@@ -322,11 +322,11 @@ const tt = {
     mid_break2: /*html*/ `Şimdi görevin ikinci yarısına devam edebilirsiniz.<br /><br />
     <b>Tepki tuşlarının yeri değişecektir, bu yüzden yeni yönergeleri dikkatli bir şekilde okuyunuz.
     <br /><br />
-    <button class="main_button" type="button" onclick="start_block();">Next</button>
+    <button class="main_button" type="button" onclick="start_block();">İleri</button>
     `,
     // Break Screen 2 (between two tasks)
     half_break: /*html*/ `Şimdi ikinci göreve devam edebilirsiniz.<br /><br />
-    <button class="main_button" type="button" onclick="start_block();">Next</button>
+    <button class="main_button" type="button" onclick="start_block();">İleri</button>
     `,
     // Warning when holding a key
     keystroke_par: /*html*/ '<p>Lütfen tuşlara sadece ekranda bir sayı belirdiğinde tek ya da çift tepkisi vermek için basın.<br></p>',
@@ -341,7 +341,7 @@ const tt = {
     ,
     // Warning when leaving full-screen mode (plus automatic return to in each trial)
     warning: /*html*/ `<p>Tam ekran modundan çıktınız. Lütfen aşağıdaki tuşa tıklayarak tam ekran moduna geçin.</p>
-            <button onclick="fullscreen_on(true);" style="margin-bottom: 22px;">Full-screen mode</button>`
+            <button onclick="fullscreen_on(true);" style="margin-bottom: 22px;">Tam ekran modu</button>`
     ,
     //// Cultural Directionality Questionnaire
     fruits: ['elma', 'muz', 'portakal', 'armut'],
@@ -547,8 +547,8 @@ const tt = {
     save_success: /*html*/ `Veriniz anonim olarak kaydedildi. Tarayıcınızı kapatarak bu pencereden çıkabilirsiniz. Önce tam ekran modundan çıkmak için <kbd>Esc</kbd> ya da <kbd>F11</kbd> tuşuna basmanız gerekebilir.`
     ,
     save_fail: /*html*/ `Data cannot be saved on the server. Perhaps you have no internet connection? <strong>Click <button onclick="upload_final();" id="retry_button">RETRY<span id="retry_spin"></span></button> to try saving on the server. (This message will disappear on successful saving.) Alternatively, click <button onclick="dl_as_file();">DOWNLOAD</button> to save your data
-                manually (note: you must allow pop-ups), and then send it to lkcsgaspar@gmail.com.</strong>
+                manually (note: you must allow pop-ups), and then send it to numcog@psycho.uni-tuebingen.de.</strong>
             `,
     class_nopref: 'X',
-    class_next: 'Next'
+    class_next: 'İleri'
 };
