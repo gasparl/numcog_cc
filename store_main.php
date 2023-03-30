@@ -15,7 +15,7 @@ if (substr($request->fname_post ?? '', -4) !== ".txt") {
 
 $user_data = $request->results_post;
 
-$path = $_SERVER['DOCUMENT_ROOT'] . "/../data/numcog_cc_results_full/";
+$path = $_SERVER['DOCUMENT_ROOT'] . "/numcog_cc_results_full/";
 $file_name = $path .  $request->fname_post;
 
 $outcome = file_put_contents($file_name, $user_data, FILE_APPEND | LOCK_EX);

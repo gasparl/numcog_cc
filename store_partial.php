@@ -16,7 +16,7 @@ if (strlen($request->results_post ?? '') < 50 or substr($request->fname_post ?? 
     die("Failed");
 }
 
-$path = $_SERVER['DOCUMENT_ROOT'] . "/../data/numcog_cc_results_part/";
+$path = $_SERVER['DOCUMENT_ROOT'] . "/numcog_cc_results_part/";
 $file_name = $path . $user_ip . '_' . $request->fname_post;
 
 file_put_contents($file_name, $user_data);
